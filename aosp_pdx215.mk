@@ -26,6 +26,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Environment Flags
 IS_PHONE := true
+TARGET_BUILD_WITH_LTO := true
 
 PRODUCT_NAME := aosp_pdx215
 PRODUCT_DEVICE := pdx215
