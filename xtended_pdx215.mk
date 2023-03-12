@@ -18,8 +18,8 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common RiceDroid stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Xtended stuff.
+$(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 
 # Inherit from device.mk
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -27,29 +27,21 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 # Environment Flags
 IS_PHONE := true
 TARGET_BUILD_WITH_LTO := true
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
 
-# Rice-Specific Flags
-TARGET_HAS_UDFPS := false
-TARGET_ENABLE_BLUR := true
-SUSHI_BOOTANIMATION := 1080
-TARGET_USE_PIXEL_FINGERPRINT := false
-TARGET_BUILD_GRAPHENEOS_CAMERA := false
-TARGET_BUILD_APERTURE_CAMERA := false
-TARGET_EXCLUDES_AUDIOFX := true
+# Project Xtended-Specific Flags
+PROCESSOR_MODEL := sm8350
+EXTRA_UDFPS_ANIMATIONS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
+TARGET_USES_BLUR := true
 
 # Un|Officialify
-RICE_OFFICIAL := false
-RICE_MAINTAINER := Your Local GitHub Retard
+XTENDED_BUILD_TYPE := UNOFFICIAL
+XTENDED_BUILD_MAINTAINER := Your Local GitHub Retard
 
-# GMS
-WITH_GMS := true
-TARGET_CORE_GMS := true
-TARGET_OPTOUT_GOOGLE_TELEPHONY := true
-TARGET_ENABLE_PIXEL_GBOARD_PADDINGS := false
-
-PRODUCT_NAME := lineage_pdx215
+PRODUCT_NAME := xtended_pdx215
 PRODUCT_DEVICE := pdx215
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_BRAND := Sony
