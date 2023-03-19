@@ -17,15 +17,15 @@
 # Inherit from sony sagami
 -include device/sony/sagami/BoardConfigCommon.mk
 
-DEVICE_PATH := device/sony/pdx215
+DEVICE_PATH := device/sony/pdx214
 
 # Display
-TARGET_SCREEN_DENSITY := 420
+TARGET_SCREEN_DENSITY := 450
 
-BOARD_KERNEL_CMDLINE += buildproduct=pdx215
+BOARD_KERNEL_CMDLINE += buildproduct=pdx214
 
 TARGET_KERNEL_SOURCE := kernel/sony/sagami
-TARGET_KERNEL_CONFIG := pdx215_defconfig
+TARGET_KERNEL_CONFIG := pdx214_defconfig
 
 BOARD_MKBOOTIMG_ARGS += --base $(BOARD_KERNEL_BASE)
 BOARD_MKBOOTIMG_ARGS += --pagesize $(BOARD_KERNEL_PAGESIZE)
@@ -37,14 +37,14 @@ BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # OTA assert
-TARGET_OTA_ASSERT_DEVICE := pdx215
+TARGET_OTA_ASSERT_DEVICE := pdx214
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pdx215
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_pdx214
 
 # Props
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # inherit from the proprietary version
-include vendor/sony/sagami/pdx215/BoardConfigVendor.mk
+include vendor/sony/sagami/pdx214/BoardConfigVendor.mk

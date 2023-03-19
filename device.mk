@@ -29,8 +29,8 @@ $(call inherit-product, device/sony/sagami/common.mk)
 $(call inherit-product-if-exists, vendor/sony/extra-sagami/extra.mk)
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2560
-TARGET_SCREEN_WIDTH := 1096
+TARGET_SCREEN_HEIGHT := 2520
+TARGET_SCREEN_WIDTH := 1080
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -49,4 +49,4 @@ PRODUCT_PACKAGES += \
     XperiaSwitch
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/sony/sagami/pdx215/pdx215-vendor.mk)
+$(call inherit-product, vendor/sony/sagami/pdx214/pdx214-vendor.mk)

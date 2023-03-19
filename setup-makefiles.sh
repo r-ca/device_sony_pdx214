@@ -8,7 +8,7 @@
 
 set -e
 
-export DEVICE_COMMON=pdx215
+export DEVICE_COMMON=pdx214
 export DEVICE_COMMON=sagami
 export VENDOR=sony
 
